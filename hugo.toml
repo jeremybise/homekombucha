@@ -1,0 +1,4 @@
+baseURL = 'https://homekombucha.com/'
+languageCode = 'en-us'
+title = 'Make Kombucha @ Home'
+theme = ['cookery']
