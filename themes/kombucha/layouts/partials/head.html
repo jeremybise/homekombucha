@@ -1,4 +1,5 @@
 {{ $time := now }}
+
 {{ $styles := resources.Get "scss/style.scss"
     | toCSS
     | resources.ExecuteAsTemplate (printf "styles.%s.css" $time) $time
