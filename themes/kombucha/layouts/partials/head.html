@@ -8,6 +8,6 @@
 {{ if .Site.IsServer }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 {{ else }}
-    {{ $styles := $styles | minify | fingerprint | resources.PostCSS }}
+    {{ $styles := $styles | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 {{ end }}
