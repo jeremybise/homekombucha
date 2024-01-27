@@ -3,6 +3,7 @@
 
 <head>
 {{ partial "head" . }}
+<title>{{ if .Title }} {{ .Title }} | {{ end }}{{ $.Site.Title }}</title>
 {{ block "header-scripts" . }}{{ end }}
 </head>
 

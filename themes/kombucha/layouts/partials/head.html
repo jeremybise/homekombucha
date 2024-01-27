@@ -1,13 +1,33 @@
-{{ $time := now }}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<meta name="description"
+  content="{{ if .IsHome }}{{ $.Site.Params.meta_description }}{{ else if .Params.meta_description }}{{ .Params.meta_description }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+
+{{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+
+{{ $time := now }}
 {{ $styles := resources.Get "scss/style.scss"
     | toCSS
     | resources.ExecuteAsTemplate (printf "styles.%s.css" $time) $time
 }}
-
 {{ if .Site.IsServer }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 {{ else }}
     {{ $styles := $styles | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 {{ end }}
+
+{{- if hugo.IsProduction -}}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ $.Site.Params.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ $.Site.Params.google_analytics }}');
+</script>
+{{- end -}}

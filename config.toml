@@ -2,3 +2,7 @@ baseURL = 'https://homekombucha.com/'
 languageCode = 'en-us'
 title = 'Make Kombucha @ Home'
 theme = ['kombucha']
+
+[params]
+  google_analytics = ""
+  meta_description = ""
