@@ -1,5 +1,5 @@
 ---
-title: Make Kombucha @ Home asdf
+title: Welcome to Make Kombucha @ Home
 ---
 
 Hello world

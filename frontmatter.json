@@ -59,7 +59,8 @@
       "title": "content"
     },
     {
-      "path": "[[workspace]]/content/posts"
+      "path": "[[workspace]]/content/posts",
+      "title": "posts"
     }
   ]
 }
