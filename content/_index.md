@@ -1,5 +1,5 @@
 ---
-title: Welcome to Make Kombucha @ Home
+title: Learn How to Make Kombucha @ Home
 ---
 
 Hello world
