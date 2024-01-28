@@ -5,6 +5,8 @@ slug: raspberry-ginger-lemon-kombucha-recipe
 draft: false
 preview: /media/homemade-trilogy-kombucha-5.jpg
 categories:
+  - Flavors
+tags:
   - Fruity
 ---
 
