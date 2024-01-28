@@ -3,7 +3,8 @@ title: Raspberry, Ginger, Lemon Kombucha Recipe
 date: 2024-01-27T02:53:04.991Z
 slug: raspberry-ginger-lemon-kombucha-recipe
 draft: false
-preview: /media/homemade-trilogy-kombucha-5.jpg
+images:
+  - /media/homemade-trilogy-kombucha-5.jpg
 categories:
   - Flavors
 tags:

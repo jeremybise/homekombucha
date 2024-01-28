@@ -2,6 +2,8 @@
 title: Learn How to Make Kombucha @ Home
 ---
 
+![Homemade Kombucha](/media/kombucha.jpeg)
+
 Intro
 
 What is Kombucha?

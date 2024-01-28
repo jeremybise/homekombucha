@@ -12,6 +12,8 @@ What is it? Buy one, get one from a friend, or make one.
 
 [Make Your Own SCOBY](/make-kombucha-scoby-at-home/)
 
+![Kombucha SCOBY](/media/scoby.jpg)
+
 Once you have your starter SCOBY, you can proceed to the first fermentation (F1)!
 
 ## First Fermentation (F1) – 7 to 12 days
