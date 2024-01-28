@@ -4,17 +4,15 @@ title: Home Kombucha Brewing Equipment and Supplies
 
 Here are what I recommend for brewing kombucha at home.
 
-Large Jar or Large Jar with Spigot
+[Large Glass Jar] or [Large Jar with Spigot]()
 
-Tea Towel
+[Tea Towels](https://amzn.to/48Qp3Ng)
 
-Glass Fermentation Bottles
+[Glass Fermentation Bottles]()
 
-Blender
+[Blender]()
 
-Fine-Mesh Strainer
-
-Ingredients
+[Fine-Mesh Strainer]()
 
 Black Tea
 
