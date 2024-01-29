@@ -1,0 +1,19 @@
+.button, button {
+  background: $accent;
+  color: $white;
+  font-family: $heading_font;
+  text-decoration: none;
+  padding: 1rem 1.5rem 0.75rem 1.5rem;
+  margin: 1rem 0;
+  display: inline-block;
+  line-height: 1rem;
+  // text-transform: uppercase;
+  border-radius: 30px;
+  &:hover {
+    color: $white;
+    background: $accent-light;
+  }
+  &::after {
+    content: ' >>';
+  }
+}
