@@ -6,13 +6,13 @@ Blah blah blah
 
 ## Make or Acquire a SCOBY
 
+![Kombucha SCOBY](/media/scoby.jpg)
+
 What is it? Buy one, get one from a friend, or make one.
 
 {{< button text="Make Your Own SCOBY" url="/make-kombucha-scoby-at-home/" >}}
 
 {{< button text="Buy a SCOBY Online" url="[/make-kombucha-scoby-at-home/](https://amazon.com)" >}}
-
-![Kombucha SCOBY](/media/scoby.jpg)
 
 Once you have your starter SCOBY, you can proceed to the first fermentation (F1)!
 
