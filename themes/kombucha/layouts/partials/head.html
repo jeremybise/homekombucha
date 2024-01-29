@@ -19,3 +19,6 @@
     {{ $styles := $styles | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 {{ end }}
+
+<link rel="preload" href="/fonts/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin ></link>
+<link rel="preload" href="/fonts/josefin-sans-v32-latin-700.woff2" as="font" type="font/woff2" crossorigin ></link>
