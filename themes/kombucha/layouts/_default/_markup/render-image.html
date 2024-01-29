@@ -1,3 +1,8 @@
 <p class="md-img">
-  <img src="/.netlify/images?url={{ .Destination | safeURL }}&w=700&h=525&q=90" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}"{{ end }} width="700" height="525"/>
+  <img 
+    src="/.netlify/images?url={{ .Destination | safeURL }}&w=400&q=90" 
+    srcset="/.netlify/images?url={{ .Destination | safeURL }}&w=500&q=90 500w"
+    srcset="/.netlify/images?url={{ .Destination | safeURL }}&w=700&q=90 700w"
+    alt="{{ .Text }}" {{ with .Title }} title="{{ . }}"{{ end }}
+  />
 </p>
