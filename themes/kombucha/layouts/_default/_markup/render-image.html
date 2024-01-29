@@ -3,6 +3,7 @@
     src="/.netlify/images?url={{ .Destination | safeURL }}&w=400&q=90" 
     srcset="/.netlify/images?url={{ .Destination | safeURL }}&w=500&q=90 500w"
     srcset="/.netlify/images?url={{ .Destination | safeURL }}&w=700&q=90 700w"
+    sizes="calc(100vw - 2rem)"
     alt="{{ .Text }}" {{ with .Title }} title="{{ . }}"{{ end }}
   />
 </p>
