@@ -1,0 +1,21 @@
+<div class="comment-replies">
+  {{ range $index, $comments := (index $.SiteDataComments_parent $.entryId_parent) }}
+  {{ if eq .reply_to $.parentId }}
+    <div id="commentid-{{ ._id }}" class="comment-reply {{ if eq .email "821da0c8884f01649a2dbbcef7487717" }}cabbagelord{{ end }}">
+        <div class="comment-info">
+            <p class="post-comment-info">
+                <span class="comment-meta">{{ .name }}</span>
+                <br>
+                    <time class="comment-date">{{ dateFormat "Jan 2, 2006 @ 3:04pm" .date }}</time>
+            </p>
+        </div>
+        <div class="comment-body">
+            <p>{{ .comment | markdownify }}</p>
+            <footer>
+              <a id="{{ ._id }}" class="comment-reply-link" href="#new-comment-form" onclick="changeValue('fields[reply_to]', '{{ $.parentId }}')">Reply</a>
+            </footer>
+        </div>
+    </div>
+  {{ end }}
+{{ end }}
+</div>

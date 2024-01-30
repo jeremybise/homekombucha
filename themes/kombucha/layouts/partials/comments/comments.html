@@ -1,0 +1,54 @@
+<section class="comments">
+
+  <hr/ > 
+
+  <div class="inner">
+    <h1 id="comments">Comments + Reviews</h1>
+    <div id="comments-container">
+      {{ $comments := readDir "data/comments" }} {{ $.Scratch.Add "hasComments"
+      0 }} {{ $postSlug := path.Base .RelPermalink }} {{ range $comments }} {{
+      if eq .Name $postSlug }} {{ $.Scratch.Add "hasComments" 1 }} {{ range
+      $index, $comments := sort (index $.Site.Data.comments $postSlug) "date"
+      "desc" }} {{ if not .reply_to }}
+      <div class="comment">
+        <div class="op-comment">
+          <div class="comment-info">
+            <p class="comment-meta">{{ .name }}</p>
+            <p class="comment-date">
+              {{ dateFormat "Jan 2, 2006 @ 3:04pm" .date }}
+            </p>
+            {{ if .rating }}
+            <p class="comment-rating">
+              {{ if .rating }} {{ range seq (math.Ceil (int .rating)) }}
+              <span class="star-filled">★</span>
+              {{ end }} {{ range seq ((sub 5 (int .rating)) ) }}
+              <span class="star-empty">☆</span>
+              {{ end }} {{ end }} {{ .rating }} stars
+            </p>
+            {{ end }}
+          </div>
+          <div class="comment-body">
+            <p>{{ .comment | markdownify }}</p>
+            <footer>
+              <a
+                href="#new-comment-form"
+                onclick="changeValue('fields[reply_to]', '{{ ._id }}')"
+                class="comment-reply-link"
+                >Reply</a
+              >
+            </footer>
+          </div>
+        </div>
+        {{ partial "comments/replies" (dict "entryId_parent" $postSlug
+        "SiteDataComments_parent" $.Site.Data.comments "parentId" ._id
+        "parentName" .name "context" .) }}
+      </div>
+      {{ end }} {{ end }} {{ end }} {{ end }} {{ if eq ($.Scratch.Get
+      "hasComments") 0 }}
+      <p>Be the first to leave a comment.</p>
+      {{ end }}
+    </div>
+    <hr />
+    {{ partial "comments/form" . }}
+  </div>
+</section>

@@ -18,3 +18,9 @@ a {
     color: $accent-light;
   }
 }
+
+hr {
+  border-top: none;
+  border-bottom: 1px dotted $accent;
+  margin: 3rem 0 3rem 0;
+}
