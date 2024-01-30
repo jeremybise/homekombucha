@@ -1,4 +1,4 @@
-baseURL = 'https://homekombucha.com/'
+baseURL = 'https://homekombucha.netlify.app/'
 languageCode = 'en-us'
 title = 'Make Kombucha @ Home'
 theme = ['kombucha']
