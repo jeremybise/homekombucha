@@ -1,6 +1,6 @@
 <h2 id="new-comment-form">Leave a comment:</h2>
 
-<form method="POST" action="/.netlify/functions/staticman/v3/?branch=main">
+<form method="POST" action="/.netlify/functions/staticman?branch=main">
   <input type="hidden" name="fields[reply_to]" value="">
   <input name="options[redirect]" type="hidden" value="{{ .Permalink }}?commented=true">
   <input name="options[slug]" type="hidden" value="{{ path.Base .RelPermalink }}">
