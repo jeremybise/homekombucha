@@ -1,0 +1,27 @@
+<script>
+  // Comment form validation
+  {{/*  window.onload = function () {
+    var form = document.getElementById("new-comment-form");
+    var pristine = new Pristine(form);
+
+    form.addEventListener('submit', function (e) {
+       e.preventDefault();
+       
+       var valid = pristine.validate(); // returns true or false
+
+    });
+  };   */}}
+
+  // For nested comments
+  function changeValue(elementName, newValue){
+    document.getElementsByName(elementName)[0].value=newValue;
+    window.location.hash = "#new-comment-form";
+  };
+
+  // Check comment query param
+  const urlParams = new URLSearchParams(window.location.search);
+  const commented = urlParams.get('commented');
+  if (commented) {
+    document.getElementById('comment-success').style.display = "block";
+  }
+</script>
