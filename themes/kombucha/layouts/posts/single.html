@@ -4,8 +4,9 @@
   <h1>{{ .Title }}</h1>
 
   {{ if .Params.recipe }}
-    <p>Stars Here</p>
-    <p class="jump"><a href="#recipe">Jump to Recipe <br /></a></p>
+    <div class="post-actions">
+      <p>{{ partial "comments/stars" . }} | <a href="#recipe">Jump to Recipe</a></p>
+    </div>
   {{ end }}
 
   {{ partial "featured-image" . }}

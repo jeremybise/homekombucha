@@ -1,0 +1,24 @@
+<span class="star-rating">
+  {{ $comments := readDir "data/comments" }}
+  {{ $postSlug := path.Base .RelPermalink }}
+  {{ $rating := 0 }}
+  {{ $count := 0 }}
+  {{ range $index, $comments := (index $.Site.Data.comments $postSlug) }}
+    {{ if ne .rating "" }}
+      {{ $rating = add $rating ( int .rating) }}
+      {{ $count = add $count 1 }}
+    {{ end }}
+  {{ end }}
+  {{ if ne $count 0 }}
+    <a href="#comments">
+    {{ $avgStars := div $rating $count }}
+    {{ range seq (math.Ceil $avgStars) }}
+    <span class="star-filled" aria-hidden="true">★</span>
+    {{ end }}
+    {{ range seq ((sub 5 $avgStars) ) }}
+    <span class="star-empty" aria-hidden="true">☆</span>
+    {{ end }} 
+    <span class="star-text"> from {{ $count }} ratings</span>
+    </a>
+  {{ end }}
+  </span>

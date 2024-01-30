@@ -24,3 +24,7 @@ hr {
   border-bottom: 1px dotted $accent;
   margin: 3rem 0 3rem 0;
 }
+
+h1 {
+  font-size: clamp(2rem, calc(0rem + 8vw), 3.5rem);
+}
