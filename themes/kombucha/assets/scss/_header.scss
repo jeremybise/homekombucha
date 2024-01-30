@@ -8,6 +8,10 @@
 
 .global-logo {
   font-size: 1.5rem;
+  a {
+    text-decoration: none;
+    font-weight: 700;
+  }
 }
 
 .global-nav {
@@ -20,6 +24,9 @@
       a {
         display: inline-block;
         padding: 0.5rem;
+        text-decoration: none;
+        font-weight: 700;
+        font-family: $heading_font;
       }
     }
   }
