@@ -5,3 +5,4 @@ resources
 node_modules
 .netlify
 .vscode
+package-lock.json
