@@ -25,7 +25,7 @@ exports.handler = (event, context, callback) => {
           "rating",
           "reply_to",
         ],
-        branch: "master",
+        branch: "main",
         commitMessage: "Add comment to {options.slug}",
         filename: "comment-{@timestamp}",
         format: "yaml",
