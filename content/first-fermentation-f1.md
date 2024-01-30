@@ -24,10 +24,10 @@ During the first fermentation of kombucha, the SCOBY (Symbiotic Culture of Bacte
 ## Directions
 
 1. Boil 4 cups of water, remove from heat, and then stir in 1 cup of sugar until dissolved. Add your tea bags and let steep for at least twenty minutes.
-2. Once steeped, add the hot sweet tea to 10 cups cool water to bring it down to a safe temperature for your SCOBY.
-3. Wish clean hands, remove the pellicle from your jar, and place it on a clean plate. Reserve 2 cups of your liquid to start the next batch.
+2. Once steeped, add the hot sweet tea to 10 cups of cool water to bring it down to a safe temperature for your SCOBY.
+3. With clean hands, remove the pellicle from your jar, and place it on a clean plate. Reserve 2 cups of your liquid to start the next batch.
 4. In your large glass jar, add your reserved starter, your batch of cooled sweet tea, and then your pellicle back on top.
-5. Cover with tightly women cloth, secured with a rubber band for 6-10 days. Try if after about six days.
+5. Cover with tightly woven cloth, and secure with a rubber band for 6-10 days. Try it after about six days.
 6. Move on to the second fermentation.
 
 ## What To Expect During F1
