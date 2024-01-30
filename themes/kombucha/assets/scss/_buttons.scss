@@ -8,6 +8,8 @@
   display: inline-block;
   line-height: 1rem;
   // text-transform: uppercase;
+  border: none;
+  cursor: pointer;
   border-radius: 30px;
   &:hover {
     color: $white;

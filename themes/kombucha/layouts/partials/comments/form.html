@@ -1,0 +1,30 @@
+<h2 id="new-comment-form">Leave a comment:</h2>
+
+<form method="POST" action="/.netlify/functions/staticman?branch=master">
+  <input type="hidden" name="fields[reply_to]" value="">
+  <input name="options[redirect]" type="hidden" value="{{ .Permalink }}?commented=true">
+  <input name="options[slug]" type="hidden" value="{{ path.Base .RelPermalink }}">
+
+  <label for="fields[name]">Name<br /><input required name="fields[name]" type="text" id="fields[name]"></label>
+
+  <label for="fields[email]">E-mail<br /><input required name="fields[email]" id="fields[email]" type="email"></label>
+
+  <label for="fields[comment]">Comment<br /><textarea required name="fields[comment]" id="fields[comment]" rows="4"></textarea></label>
+
+  {{ with .Params.recipe }}
+  <label for="fields[rating]">How would you rate this recipe/guide?<br />
+    <select name="fields[rating]" id="fields[rating]">
+      <option></option>
+      <option value="1">1 stars</option>
+      <option value="2">2 stars</option>
+      <option value="3">3 stars</option>
+      <option value="4">4 stars</option>
+      <option value="5">5 stars</option>
+    </select>
+  </label>
+  {{ end }}
+  
+  <p>
+    <button type="submit">Post Your Response</button>
+  </p>
+</form>
