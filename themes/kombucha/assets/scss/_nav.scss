@@ -18,6 +18,10 @@
   }
 }
 
+.mobile-nav.open .global-nav {
+  display: block;
+}
+
 .global-nav {
   display: none;
   left: 0;

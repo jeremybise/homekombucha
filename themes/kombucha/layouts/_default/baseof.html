@@ -19,5 +19,9 @@
     {{ partial "footer" }}
 </body>
 
+{{ $main := resources.Get "js/main.js" }}
+{{ $js := slice $main | resources.Concat "js/main.js" }}
+<script src="{{ $js.RelPermalink }}"></script>
+
 {{ block "footer-scripts" . }} {{ end }}
 </html>
