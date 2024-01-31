@@ -1,13 +1,12 @@
 <header class="global-header">
   <h1 class="global-logo"><a href="/">Make Kombucha @ Home</a></h1>
-  {{/*  <nav class="global-nav">
-    <ul>
-      <li><a href="/how-to-make-kombucha-at-home/">Start Here</a></li>
-      <li><a href="/categories/flavors/">Flavors</a></li>
-      <li><a href="/categories/guides/">Guides</a></li>
-      <li><a href="/kombucha-equipment-supplies/">Equipment + Supplies</a></li>
-      <li><a href="/about/">About</a></li>
-    </ul>
-  </nav>  */}}
   {{ partial "nav" . }}
+  <button aria-label="Menu Button" class="hamburger hamburger--spin menu-button" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner">Menu</span>
+    </span>
+  </button>
 </header>
+<div class="mobile-nav">
+  {{ partial "nav" . }}
+</div>
