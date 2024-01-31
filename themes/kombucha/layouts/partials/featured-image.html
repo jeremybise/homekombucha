@@ -2,9 +2,9 @@
 {{$src := index (.) 0}}
 <p class="featured-image">
   <img 
-  src="/.netlify/images?url={{ $src | safeURL }}&w=400&h=400&q=90" 
-  srcset="/.netlify/images?url={{ $src | safeURL }}&w=500&h=500&q=90 500w"
-  srcset="/.netlify/images?url={{ $src | safeURL }}&w=700&h=700&q=90 700w"
+  src="/.netlify/images?url={{ $src | safeURL }}&w=400&h=400&fit=cover" 
+  srcset="/.netlify/images?url={{ $src | safeURL }}&w=500&h=500&fit=cover 500w"
+  srcset="/.netlify/images?url={{ $src | safeURL }}&w=700&h=700&fit=cover 700w"
   sizes="calc(100vw - 2rem)"
   alt=""
 />
