@@ -1,5 +1,9 @@
 ---
 title: How to Brew Kombucha at Home
+menus:
+  main:
+    name: "Start Here"
+    weight: 1
 ---
 
 It's surprisingly easy to brew that fizzy, gut-healthy drink called kombucha at home. 

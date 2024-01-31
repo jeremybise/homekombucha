@@ -1,5 +1,9 @@
 ---
 title: Home Kombucha Brewing Equipment and Supplies
+menus:
+  main:
+    name: "Equipment + Supplies"
+    weight: 2
 ---
 
 Build your own kombucha homebrewing starter kit with these items. Here are what I recommend for brewing kombucha at home.

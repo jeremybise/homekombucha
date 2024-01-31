@@ -1,0 +1,36 @@
+<button aria-label="Menu Button" class="hamburger hamburger--spin menu-button" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner">Menu</span>
+  </span>
+</button>
+
+<nav class="global-nav">
+  <ul class="nav">
+    {{ $currentPage := . }}
+    {{ range site.Menus.main }}
+        {{ if .HasChildren }}
+            <li class="{{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}active{{ end }}">
+                <a href="#">
+                    {{ .Pre }}
+                    <span>{{ .Name }}</span>
+                </a>
+            </li>
+            <ul class="sub-menu">
+                {{ range .Children }}
+                    <li class="{{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}active{{ end }}">
+                        <a href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        {{ else }}
+            <li>
+                <a href="{{ .URL }}">
+                    {{ .Pre }}
+                    <span>{{ .Name }}</span>
+                </a>
+            </li>
+        {{ end }}
+    {{ end }}
+    <li><a href="{{ .Site.Params.facebookUrl }}" class="nav-social" rel="noopener" target="_blank" title="Follow us on Facebook">F</a></li>
+  </ul>
+</nav>
