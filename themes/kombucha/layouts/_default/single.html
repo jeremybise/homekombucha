@@ -1,17 +1,116 @@
 {{ define "main" }}
+  {{ partial "comments/success" }}
 
-{{ partial "comments/success" }}
+  <h1>{{ .Title }}</h1>
 
-<h1>{{ .Title }}</h1>
+  {{ if .Params.recipe }}
+    <div class="post-actions">
+      <p>{{ partial "comments/stars" . }} | <a href="#recipe">Jump to Recipe</a></p>
+    </div>
+  {{ end }}
 
-{{ partial "featured-image" . }}
+  {{ partial "featured-image" . }}
 
-{{ .Content }} 
+  {{ .Content }}
+
+  {{ if .Params.recipe }}
+  <hr />
+
+  <div id="recipe-card" class="inner recipe-card">
+    <h1 id="recipe">{{ if .Params.recipe.title }}{{ .Params.recipe.title }}{{ else}} {{ .Title }}{{ end }}</h1>
+
+    <div class="recipe-actions">
+      <div>
+      
+      {{ range (.GetTerms "recipe-categories") }}
+        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+      {{ end }}
+      </div>
+      <div><a href="#new-comment-form">Leave a review</a></div>
+      <div><a href="{{ .RelPermalink}}/print.html">Print Recipe</a></div>
+    </div>
+
+    {{ with .Params.recipe.summary }}
+      <p class="recipe-summary">
+        {{ . | markdownify }}
+      </p>
+    {{ end }}
+
+    <p class="recipe-meta">
+      <strong>Prep Time:</strong> {{ with .Params.recipe.prep_time.days }}{{ . }} days {{ end }} {{ with .Params.recipe.prep_time.hours }}{{ . }} hours {{ end }}{{ with .Params.recipe.prep_time.minutes }}{{ . }} minutes{{ end }} <span class="divider">|</span> 
+
+      <strong>Cook Time:</strong> {{ with .Params.recipe.cook_time.days }}{{ . }} days {{ end }} {{ with .Params.recipe.cook_time.hours }}{{ . }} hours {{ end }}{{ with .Params.recipe.cook_time.minutes }}{{ . }} minutes{{ end }} <span class="divider">|</span>  
+
+      <strong>Total Time:</strong> {{ with .Params.recipe.total_time.days }}{{ . }} days {{ end }} {{ with .Params.recipe.total_time.hours }}{{ . }} hours {{ end }}{{ with .Params.recipe.total_time.minutes }}{{ . }} minutes{{ end }}
+
+      {{ with .Params.recipe.yield }}
+      <span class="divider">|</span> <strong>Yield:</strong> {{ .text }}
+    {{ end }}
+    </p>
+
+    {{ with .Params.recipe.equipment }}
+      <h2>Equipment</h2>
+      <ul>
+        {{ range . }}
+          <li>{{ . | markdownify }}</li>
+        {{ end }}
+      </ul>
+    {{ end }}
+
+    {{ with .Params.recipe.ingredients }}
+      <h2>Ingredients</h2>
+      <ul>
+        {{ range . }}
+          <li>{{ . | markdownify }}</li>
+        {{ end }}
+      </ul>
+    {{ end }}
+
+    {{ with .Params.recipe.components }}
+      <h2>Ingredients</h2>
+      {{ range . }}
+      <h4>{{ .title }}</h4>
+      <ul>
+        {{ range .ingredients }}
+          <li>{{ . | markdownify }}</li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    {{ end }}
+
+    {{ with .Params.recipe.directions }}
+      <h2>Directions</h2>
+      <ol>
+        {{ range . }}
+          <li>{{ . | markdownify }}</li>
+        {{ end }}
+      </ol>
+    {{ end }}
+
+    {{ with .Params.recipe.notes }}
+      <h2>Notes</h2>
+      <ul>
+        {{ range . }}
+          <li>{{ . | markdownify }}</li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+</section>
+
+<div class="inner did-you-make">
+  <section class="callout">
+    <h1>Did you make this recipe?<br />
+      Have questions?</h1>
+    <p>I'd love to hear from you!</p>
+    <p><a href="#new-comment-form">Leave a comment or review!</a></p>
+  </section>
+</div>
+{{ end }}
 
 <div class="comments">
   {{ partial "comments/comments" . }}
 </div>
-
 {{ end }}
 
 {{ define "footer-scripts" }}

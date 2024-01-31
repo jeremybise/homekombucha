@@ -2,7 +2,11 @@
 title: How to Brew Kombucha at Home
 ---
 
-Blah blah blah
+It's surprisingly easy to brew that fizzy, gut-healthy drink called kombucha at home. 
+
+Kombucha is...
+
+It's a two-step process (or three if you need to make your own SCOBY). Let's dive into it!
 
 ## Make or Acquire a SCOBY
 

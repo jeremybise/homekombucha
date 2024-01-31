@@ -5,6 +5,7 @@
       "name": "default",
       "pageBundle": false,
       "previewPath": null,
+      "filePrefix": null,
       "fields": [
         {
           "title": "Title",
@@ -17,19 +18,21 @@
           "type": "string"
         },
         {
-          "title": "Publishing date",
+          "title": "Publish Date",
           "name": "date",
           "type": "datetime",
           "default": "{{now}}",
           "isPublishDate": true
         },
         {
-          "title": "Content preview",
-          "name": "preview",
-          "type": "image"
+          "title": "Images",
+          "name": "images",
+          "type": "image",
+          "multiple": true,
+          "isPreviewImage": true
         },
         {
-          "title": "Is in draft",
+          "title": "Is in draft?",
           "name": "draft",
           "type": "draft"
         },
@@ -44,11 +47,177 @@
           "type": "categories"
         }
       ]
+    },
+    {
+      "name": "recipe",
+      "pageBundle": false,
+      "previewPath": "/posts",
+      "filePrefix": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Date",
+          "name": "date",
+          "type": "datetime"
+        },
+        {
+          "title": "Is in draft?",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Images",
+          "name": "images",
+          "type": "image",
+          "multiple": true,
+          "isPreviewImage": true
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Recipe",
+          "name": "recipe",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "keywords",
+              "name": "keywords",
+              "type": "string"
+            },
+            {
+              "title": "Cuisine",
+              "name": "cuisine",
+              "type": "choice",
+              "choices": [
+                "American",
+                "Japanese",
+                "French",
+                "Chinese"
+              ]
+            },
+            {
+              "title": "Prep Time",
+              "name": "prep_time",
+              "type": "fields",
+              "fields": [
+                {
+                  "title": "days",
+                  "name": "days",
+                  "type": "number"
+                },
+                {
+                  "title": "hours",
+                  "name": "hours",
+                  "type": "number"
+                },
+                {
+                  "title": "minutes",
+                  "name": "minutes",
+                  "type": "number"
+                }
+              ]
+            },
+            {
+              "title": "Cook Time",
+              "name": "cook_time",
+              "type": "fields",
+              "fields": [
+                {
+                  "title": "days",
+                  "name": "days",
+                  "type": "number"
+                },
+                {
+                  "title": "hours",
+                  "name": "hours",
+                  "type": "number"
+                },
+                {
+                  "title": "minutes",
+                  "name": "minutes",
+                  "type": "number"
+                }
+              ]
+            },
+            {
+              "title": "Total Time",
+              "name": "total_time",
+              "type": "fields",
+              "fields": [
+                {
+                  "title": "days",
+                  "name": "days",
+                  "type": "number"
+                },
+                {
+                  "title": "hours",
+                  "name": "hours",
+                  "type": "number"
+                },
+                {
+                  "title": "minutes",
+                  "name": "minutes",
+                  "type": "number"
+                }
+              ]
+            },
+            {
+              "title": "Yield",
+              "name": "yield",
+              "type": "fields",
+              "fields": [
+                {
+                  "title": "integer",
+                  "name": "integer",
+                  "type": "number"
+                },
+                {
+                  "title": "text",
+                  "name": "text",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "title": "Equipment",
+              "name": "equipment",
+              "type": "list"
+            },
+            {
+              "title": "Ingredients",
+              "name": "ingredients",
+              "type": "list"
+            },
+            {
+              "title": "Directions",
+              "name": "directions",
+              "type": "list"
+            },
+            {
+              "title": "Notes",
+              "name": "notes",
+              "type": "list"
+            }
+          ]
+        }
+      ]
     }
   ],
   "frontMatter.framework.id": "hugo",
   "frontMatter.content.publicFolder": "static",
-  "frontMatter.preview.host": "http://localhost:1313",
+  "frontMatter.preview.host": "http://localhost:8888",
   "frontMatter.content.pageFolders": [
     {
       "path": "[[workspace]]/archetypes",
@@ -56,11 +225,15 @@
     },
     {
       "path": "[[workspace]]/content",
-      "title": "content"
+      "title": "content",
+      "previewPath": "/",
+      "filePrefix": null
     },
     {
       "path": "[[workspace]]/content/posts",
-      "title": "posts"
+      "title": "posts",
+      "previewPath": "/posts",
+      "filePrefix": null
     }
   ]
 }
