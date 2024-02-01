@@ -1,4 +1,15 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
-  {{ .Content }} 
+
+  {{ .Content }}
+
+  <h2>Flavor Inspiration</h2>
+  {{ range where .Site.RegularPages ".Params.categories" "intersect" (slice "Flavors") }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+
+  <h2>More Guides and Resources</h2>
+  {{ range where .Site.RegularPages ".Params.categories" "intersect" (slice "Guides") }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
 {{ end }}
